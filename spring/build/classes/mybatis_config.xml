@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 데이터 베이스를 연결하기 위한 기본 정보를 제공 -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" 	value="oracle.jdbc.driver.OracleDriver"/>
+				<property name="url"		value="jdbc:oracle:thin:@localhost:1521:xe"/>
+				<property name="username" 	value="hr"/>
+				<property name="password" 	value="hr"/>
+			</dataSource>
+		</environment>
+	</environments>
+	  
+	<mappers>
+		<mapper resource="student.xml"/> <!-- student.xml이 mapper에 의해서 mapping됨 -->
+			<!-- student.xml에서 필요한 sql문들을 가지고 있어~ -->
+		<mapper resource="board.xml"/> <!-- board.xml이 mapper에 의해서 mapping됨 -->
+	</mappers>
+</configuration>

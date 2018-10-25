@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+
+/* order_menu */
+#all {
+/*    width: 1600px; */
+   height: 900px;
+   border: 1px solid black;
+   margin: 0 auto;
+}
+
+#t_menu {}
+
+#l_menu, #c_menu, #r_menu {
+   display: inline-block;
+}
+
+#l_menu {
+   width: 17%;
+   float: left;
+}
+
+#c_menu {
+   width: 55%;
+   float: left;
+}
+
+#r_menu {
+   width: 28%;
+}
+
+/* tap_menu */
+
+#menu_type {
+    width: 100%; 
+   background: black;
+}
+
+#menu_type .tap_menu {
+   display: inline-block;
+   color: #76777a;
+   font-size: 20px;
+   width: 44%;
+/*     text-align: center; */
+}
+
+#menu_type .tap_menu:hover, #menu_type .tap_menu:active {
+   display: inline-block;
+   color: white;
+   font-size: 20px;
+   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 35px #ff2a00, 0 0 50px #ff2a00, 0 0 65px #ff2a00, 0 0 80px #ff2a00, 0 0 100px #ff2a00;
+}
+
+#snack {text-align: right;    margin-left: 3%;}
+#liquor {text-align: left;    margin-left: 3%;}
+
+/* center_menu */
+
+
+#menu_list {
+   background: #9999;
+   width: 100%;
+   height: 700px;
+   overflow-y: scroll;
+}
+#menu_list::-webkit-scrollbar{width: 0px;}
+/* #menu_list */
+
+#menu_list .item {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #3337;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+    
+}
+
+#menu_list .item:hover {
+   margin-top: 15px;
+   margin-bottom: 20px;
+   position: relative;
+   background: #3337;
+   text-decoration: underline;
+   text-shadow: 0 0 10px #fff,
+		 0 0 20px #ff1114,
+ 		 0 0 30px #ff1100;
+}
+
+#menu_list  .item-img {
+   position: relative;
+   overflow: hidden;
+   text-align: center;
+}
+
+#menu_list .item img {
+   width: 225px;
+   height: 225px;
+   margin-top: 0px;
+   top: 0px;
+   left: 0px;
+   position: relative;
+   border-radius: 19px;
+}
+
+#menu_list .item input {
+	text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    width: 150px;
+    height: 35px;
+    background: #010109;
+    border: none;
+    box-shadow: 2px 2px #9112;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#menu_list .item-name {
+   width: 100%;
+   text-align: center;
+}
+
+#menu_list  .item-name a {
+   font-size: 22px;
+   font-weight: bold;
+   letter-spacing: 3px;
+   color: ivory;
+   text-transform: uppercase;
+}
+
+#menu_list .price {
+   font-size: 18px;
+   font-weight: bold;
+   z-index: 9;
+   display: inline-block;
+   width: 100%;
+   text-align: center;
+   margin-top: 20px;
+   color: ivory;
+}
+
+
+/* left_menu */
+#menu {
+	display: inline-block;
+	background: #343a4e;
+	color: #515b7b;
+ 	width: 100%; 
+	height: 700px;
+}
+
+#menu ul {padding-top: 30px;}
+
+#menu ul li {
+	list-style: none;
+	font-size: 20px;
+	text-decoration: underline;
+	margin: 5px;
+}
+
+#menu ul li:hover, #menu ul li:active {
+	font-size: 20px;
+	text-decoration: underline;
+	color: white;
+	text-shadow: 0 0 10px #fff,
+		 0 0 20px #fff,
+ 		 0 0 30px #fff, 
+		 0 0 40px #d1ad8f, 
+		 0 0 70px #d1ad8f,
+ 		 0 0 80px #d1ad8f, 
+ 		 0 0 100px #d1ad8f, 
+ 		 0 0 150px #d1ad8f; 
+}
+
+/* right_menu */
+#right_order {
+	display: inline-block;
+ 	width: 100%; 
+	height: 700px;
+}
+
+#right_order #order_list {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 35px;
+/* 	border-bottom: 1px solid #9b9b9b; */
+	margin-bottom: 1%;
+}
+
+#order_status {
+	height: 61%;
+	overflow-y: scroll; 
+}
+#order_status::-webkit-scrollbar{width: 0px;}
+
+#order_status #tableZone {
+	height: 200px;
+	
+}
+
+#tableZone .add_list {
+	color: white;
+}
+
+#tableZone .add_list .r_name {
+	display: inline-block;
+	width: 40%;
+	
+}
+
+#tableZone .add_list .r_cnt {
+	display: inline-block;
+	
+	
+}
+
+#tableZone .add_list .r_price {
+	display: inline-block;
+	width: 40%;
+	margin-left: 10%;
+	
+}
+
+#pre_order {
+	height: 10%;
+	background: #f9f9f9;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #9b9b9b;
+	color: #c3c3c3;
+}
+
+#pre_order #previous {
+	float: left;
+}
+
+#pre_order #pre_price {
+	float: right;
+}
+
+#now_order {
+	height: 10%;
+    color: white;
+    background: #3339;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#now_order #now_price {
+	float: right;
+}
+
+#all_order{
+	text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    background: #7777;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#to_order {
+	height: 15%;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	background: #fd4520;
+	text-align: center;
+	line-height: 5;
+}
+
+.btn-primary {
+	background: #fd4520;
+	color: white;
+	font-weight: bold;
+	border-radius: 0;
+	border: none;
+}
+
+.btn-default {
+	border-radius: 0;
+}
+
+/* 총 주문내역( modal_show_order_list)  */
+#modal_show_order_list_text{
+	color: #181c1f;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    text-shadow: 2px 2px #ddd;
+}
+
+#modal_show_order_list_tot_price {
+	color: #181c1f;
+    text-align: center;
+    font-size: 18px;
+	font-weight: bold;
+}
+
+#modal_show_order_list_footer .btn-default {
+	color: black;
+}
+
+/* order_result.jsp의 css */
+
+#order_result {
+	font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 15;
+}
+
+#tableModal .tdCnt .glyphicon-minus:before, #tableModal .tdCnt .glyphicon-plus, #tableModal .glyphicon-remove {
+	display: none;
+}
+
+
+/* to_want_to_pay.jsp의 css */
+
+#to_want_to_pay {
+	font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 15;
+}

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+#index {
+	width: 1000px;
+	margin: 0 auto;
+}
+header {
+	height: 60px;
+	background-color: #d5eeff;
+	font-family: 'Hanalei Fill', cursive;
+	text-align: center;
+	line-height: 60px;
+	font-size: 50px;
+	padding: 10px 10px;
+	position: relative;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+
+header a:hover, header ul li:hover {
+	cursor: url(prodo.JPG), auto;
+	color: aliceblue;
+
+}
+
+header ul{
+	position: absolute;
+	right: 7px;
+	bottom: -35px;
+	font-size: 16px;
+}
+
+header ul li {
+	list-style: none;
+}
+
+
+#main_menu {
+	margin-top: 5px;
+	height: 55px;
+	background-color: #fff6da;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 18px;
+	line-height: 55px;
+	text-align: center;
+}
+
+	#main_menu span {
+		padding: 9px;
+	}
+
+	#main_menu span:hover {
+		text-decoration: underline;
+		background: black;
+		color: white;
+		font-size: 18px;
+		box-sizing: border-box;
+		cursor: url(lion.JPG), auto;
+	}
+
+	#main_menu span:active{
+		color: yellow;
+	}
+	
+#btn , .btn {
+		font-size: 15px;
+		background: ivory;
+		font-family: 'Schoolbell', cursive;
+		border-radius: 9px;
+		border: 1px solid ivory;
+		   
+}
+
+#btn:hover, .btn:hover, .np {
+		font-family: 'Schoolbell', cursive;
+		border: 1px solid white;
+		background: black;
+		color: white;
+		cursor: url(ap22.JPG), auto;
+	    border-radius: 9px;
+}
+
+#center {
+	width: 1000px;
+	overflow: hidden;
+	height: 700px;
+}
+
+#sub_menu {
+	margin-top: 10px;
+	width: 190px;
+	height: 100%;
+	overflow: scroll;
+	background-color: #f7ca44;
+	display: inline-block;
+	font-family: 'Patrick Hand', cursive;
+	padding: 5px;
+}
+
+#content {
+	margin-top: 10px;
+	padding: 5px;
+	width: 784px;
+	height: 100%;
+	overflow: scroll;
+	background-color: #a2792f;
+	display: inline-block;
+	font-family: 'Gaegu', cursive;
+}
+
+#info {
+	padding-left: 10px;
+}
+#sub_menu li:hover {
+	cursor: url(apeach.JPG), auto;
+	
+}
+
+#manipulation div {
+	border: 1px solid black;
+	height: 150px;	
+}
+
+.menu_item {
+	list-style: none;
+	padding: 5px;
+	box-sizing: border-box;
+	width: 120px;
+	margin: 5px;
+	border: 2px outset;
+	text-align: center;
+}
+
+.add_class {
+	display: table-cell;
+}
+
+#toggle #target {
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	vorder: 3px solid #aaaaaa;
+}
+
+.addClass {
+	background: #999999;
+}
+
+.label {
+		display: inline-block;
+		width: 55px;
+		text-align: right;
+		vertical-align: top;
+	}
+
+#forphoto > input, #forphoto > img, #btnRegister, #qydqyd {
+	    margin-left: 61px;
+	
+}
+
+
+footer {
+	margin-top: 10px;
+	height: 100px;
+	background-color: #5c3c10;
+	font-family: 'Hanalei Fill', cursive;
+	text-align: center;
+	line-height: 100px;
+	font-size: 50px;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:scheimaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	
+	<welcome-file-list>
+	    <welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	 <!-- customer -->
+	<servlet>
+		<servlet-name>customer</servlet-name>
+		<servlet-class>servlet.Cud_servlet</servlet-class>
+				<!-- 클래스명은 full name 즉,패키지가 포함된 이름으로 입력해준다 -->
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>customer</servlet-name>
+		<url-pattern>*.cud</url-pattern>
+	</servlet-mapping>
+	
+	<!-- admin -->
+   <servlet>
+      <servlet-name>admin</servlet-name>
+      <servlet-class>servlet.Admin_servlet</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+      <servlet-name>admin</servlet-name>
+      <url-pattern>*.admin</url-pattern>
+   </servlet-mapping>
+   	
+   	<!-- cart -->
+     <servlet>
+      <servlet-name>cart</servlet-name>
+      <servlet-class>servlet.Cart_servlet</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+      <servlet-name>cart</servlet-name>
+      <url-pattern>*.crt</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+      <servlet-name>product</servlet-name>
+      <servlet-class>servlet.Prod_servlet</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+      <servlet-name>product</servlet-name>
+      <url-pattern>*.prod</url-pattern>
+   </servlet-mapping>
+	
+</web-app>

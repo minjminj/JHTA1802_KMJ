@@ -1,0 +1,7 @@
+
+7월 20, 2018 23:00:34.22 NEW SESSION
+7월 20, 2018 23:00:34.22 [19288:8816:0720/230034.220:ERROR:install_util.cc(589)] Unable to create registry key HKLM\SOFTWARE\Policies\Google\Chrome for reading result=2
+7월 20, 2018 23:00:34.68 [19288:15488:0720/230034.684:ERROR:external_registry_loader_win.cc(158)] File C:\Users\MinJeong\AppData\Local\Google\Drive\user_default\apdfllckaahabafndbhieahigkjlhalf_live.crx for key Software\Google\Chrome\Extensions\apdfllckaahabafndbhieahigkjlhalf does not exist or is not readable.
+7월 20, 2018 23:02:25.68 Unable to read VR Path Registry from C:\Users\MinJeong\AppData\Local\openvr\openvrpaths.vrpath
+7월 20, 2018 23:02:25.68 [19288:8816:0720/230225.682:ERROR:latency_info.cc(164)] Surface::TakeLatencyInfoFromFrame, LatencyInfo vector size 101 is too big.
+7월 20, 2018 23:02:26.59 [19288:8816:0720/230226.595:ERROR:latency_info.cc(164)] Surface::TakeLatencyInfoFromFrame, LatencyInfo vector size 102 is too big.

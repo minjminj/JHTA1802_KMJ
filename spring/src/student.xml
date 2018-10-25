@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace='student'>
+	
+	<select id="login" parameterType="bean.StudentVo" resultType="int">
+		select count(id)
+		from student
+		where id = #{id} and pwd = #{pwd}
+	</select>
+	
+	
+	<select id="find" parameterType="bean.StudentVo" resultType="bean.StudentVo">
+		select id, pwd, email
+		from student
+		where id = #{id} or phone = #{phone}
+	</select>
+
+	
+	<select id="list_count" parameterType="String" resultType="int">
+		select count(id) cnt
+		from student  
+		where id like 		'%${_parameter}%' 
+			or name  like   '%${_parameter}%' 
+			or email like 	'%${_parameter}%'
+	</select>
+	
+	<select id="list" parameterType="map" resultType="bean.StudentVo">
+		select * from (
+			select rownum num, r.* from (
+				 select * 
+				 from student 
+				 where id like 		'%${findStr}%' 
+				 	or name like    '%${findStr}%' 
+				 	or email like 	'%${findStr}%'
+			) r
+		) where num between #{startNo} and #{endNo} 
+	</select>
+	
+	<insert id="insert" parameterType="bean.StudentVo">
+		insert into student
+		values(#{id}, #{name}, #{phone},
+		#{pwd}, #{post}, #{address}, #{email},
+		sysdate, #{photo}, #{photoOri})
+	</insert>
+	
+	<select id="view" parameterType="String" resultType="bean.StudentVo">
+		select * 
+		from student 
+		where id = #{_parameter}
+	</select>
+	
+	<update id='update' parameterType="bean.StudentVo">
+		update student set
+			name = #{name} , 
+			phone = #{phone} , 
+			post = #{post} ,
+			address = #{address} ,
+			email = #{email} ,
+			photo = #{photo} ,
+			photoOri = #{photoOri} 
+		where id = #{id} and pwd = #{pwd}
+	</update>
+	
+	<delete id="delete" parameterType="String">
+		delete from student where id = #{_parameter}
+	</delete>
+	
+	
+	
+	
+<!-- 	<insert id="insert_reply" parameterType="bean.BoardVo"> -->
+<!-- 		insert into board -->
+<!-- 		values(seq_board.nextval, sysdate,  -->
+<!-- 		#{id}, #{subject}, #{doc}, 0,  -->
+<!-- 		#{grp}, #{grp}||'-'||seq_board.currval, -->
+<!-- 		#{attfile}, #{fileOri}, #{password}) -->
+<!-- 	</insert> -->
+	
+</mapper>

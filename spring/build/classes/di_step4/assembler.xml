@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- step3의 assembler.java와 같은 역할(외부조립기) -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		
+	<bean id="oracle" class="di_step4.Oracle"/> <!-- class 는 fullname으로 써줄것! -->
+	<bean id="mysql" class="di_step4.MySql"/>
+	<bean id="mssql" class="di_step4.MsSql"/>
+	
+	<bean id="main" class="di_step4.Main">
+		<constructor-arg ref="oracle"/> <!-- main클래스에 있는 생성자에 oracle을 주입하는 역할 --><!-- 외부 환경에 따른 결과를 전달받는다 -->
+	</bean> 
+</beans>

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+div#mj {
+		width: 247px;
+		
+	}
+
+#title {
+	font-family: 'Gaegu', cursive;
+	border-left:10px solid #ff5555;
+	padding-left:10px;
+	box-sizing:border-box;
+	background:#ffeeee;
+}
+
+div#result {
+	font-family: 'Gaegu', cursive;
+	border:2px outset #ebebde;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 525px; height:350px;
+	background-image: url(dani.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% ;
+	position: realtive;
+	color: #000080;
+	text-shadow: 2px 2px 1px #ffffff;
+	font-weight:bold;
+}

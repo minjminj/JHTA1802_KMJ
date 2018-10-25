@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace='mbr'>
+
+	<select id="login" parameterType="java.util.HashMap" resultType="int">
+		select count(mbr_id)
+		from members
+		where mbr_id = #{id} and mbr_pwd = #{pwd}
+	</select>
+	
+	<update id="engrave" parameterType="java.util.HashMap">
+		update guest set mbr_no = #{mbrNo} where table_no = #{tblNo} 
+	</update>
+	
+	<select id="checkId" parameterType="String" resultType="int">
+		select count(mbr_id) cnt
+		from members
+		where mbr_id = #{_parameter}
+	</select>	
+	
+	<insert id="insert" parameterType="bean.MembersVo">
+		insert into members
+		values
+		(seq_mbr_no.nextval, #{mbrId}, 4, #{mbrName}, #{mbrPhone}, #{mbrPwd}, #{mbrGender}, sysdate, #{mbrBirth}, 0)
+	</insert>
+	
+	<select id="checkInfo" parameterType="java.util.HashMap" resultType="int">
+		select count(mbr_no)
+		from members
+		where mbr_name = #{name} and mbr_phone = #{phone}
+	</select>
+	
+	<select id="findInfo" parameterType="java.util.HashMap" resultType="bean.MembersVo">
+		select mbr_no mbrNo, mbr_id mbrId, mbr_name mbrName, mbr_phone mbrPhone, mbr_pwd mbrPwd,
+			mbr_gender mbrGender, mbr_reg_date mbrRegDate, mbr_birth mbrBirth, mbr_point mbrPoint,
+			m.sc_no scNo, s.sc_from scFrom
+		from members m join sign_code s
+		on m.sc_no = s.sc_no
+		<where>
+			<if test="id != null">
+				mbr_id = #{id} and mbr_pwd = #{pwd}
+			</if>
+			<if test="name != null">
+				mbr_name = #{name} and mbr_phone = #{phone}
+			</if>
+			<if test="no != null">
+				mbr_no = #{no}
+			</if>
+		</where>
+	</select>
+	
+	<select id="listCnt" parameterType="String" resultType="int">
+		select count(mbr_no) cnt
+		from members m join sign_code s
+		on m.sc_no = s.sc_no
+		where mbr_id like #{_parameter}
+			or mbr_name like #{_parameter}
+			or mbr_phone like #{_parameter}
+			or mbr_gender like #{_parameter}
+			or mbr_birth like #{_parameter}
+			or mbr_point like #{_parameter}
+			or sc_from like #{_parameter}
+	</select>
+	
+	<select id="list" parameterType="java.util.HashMap" resultType="bean.MembersVo">
+		select * from(
+			select rownum num, r.* from(
+				select mbr_no mbrNo, mbr_id mbrId, mbr_name mbrName, mbr_phone mbrPhone, mbr_pwd mbrPwd,
+					mbr_gender mbrGender, mbr_reg_date mbrRegDate, mbr_birth mbrBirth, mbr_point mbrPoint,
+					m.sc_no scNo, s.sc_from scFrom
+				from members m join sign_code s
+				on m.sc_no = s.sc_no
+				where mbr_id like #{findStr}
+					or mbr_name like #{findStr}
+					or mbr_phone like #{findStr}
+					or mbr_gender like #{findStr}
+					or mbr_birth like #{findStr}
+					or mbr_point like #{findStr}
+					or sc_from like #{findStr}
+				order by mbr_reg_date desc
+			)r
+		) where num between #{startNo} and #{endNo}
+	</select>
+	
+	<update id="update" parameterType="bean.MembersVo">
+		update members set
+		mbr_name = #{mbrName}, mbr_phone = #{mbrPhone}, mbr_pwd = #{mbrPwd}, mbr_birth = #{mbrBirth}, mbr_gender = #{mbrGender}, mbr_point = #{mbrPoint}
+		where mbr_no = #{mbrNo}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		delete from members
+		where mbr_no = #{_parameter}
+	</delete>
+	
+</mapper>

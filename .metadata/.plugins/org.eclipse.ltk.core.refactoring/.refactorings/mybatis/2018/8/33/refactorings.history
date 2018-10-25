@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;mybatis/WebContent/board/delete.jsp&apos; to &apos;delete_result.jsp&apos;" description="Rename resource &apos;delete.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/board/delete.jsp" name="delete_result.jsp" stamp="1534583519726" updateReferences="true"/>
+</session>

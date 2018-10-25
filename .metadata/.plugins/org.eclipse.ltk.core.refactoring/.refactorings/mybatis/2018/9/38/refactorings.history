@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;min.TEst&apos; to &apos;InsertSort&apos;&#x0D;&#x0A;- Original project: &apos;mybatis&apos;&#x0D;&#x0A;- Original element: &apos;min.TEst&apos;&#x0D;&#x0A;- Renamed element: &apos;min.InsertSort&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TEst&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;min{TEst.java[TEst" matchStrategy="1" name="InsertSort" qualified="false" references="true" similarDeclarations="false" stamp="1537196098667" textual="false" version="1.0"/>
+</session>

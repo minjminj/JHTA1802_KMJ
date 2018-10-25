@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+#header, #content, #footer {
+	margin: 5px auto;
+	width: 100%;
+	overflow:scoll;
+}
+
+#header {
+	border-bottom: 10px solid #FC9D9A;
+	position: realative;
+	height: 100px;
+	background-image: url("../img/kakao1.jpg");
+	
+	 -webkit-animation-literation-count: 1;
+	 -webkit-animation-duration: 2s;
+}
+	
+	#top_menu {
+		font-family: 'Do Hyeon', sans-serif;
+		position: absolute;
+		top: 4px;
+		right: 10px;
+	}
+	
+	#top_menu > #idbox {
+		font-family: 'Do Hyeon', sans-serif;
+		border: 0;
+		text-align: right;
+	}
+	
+	#top_menu > #blogin, #top_menu > #blogout {
+		font-family: 'Do Hyeon', sans-serif;
+		border: 0;
+		background: white;
+	}
+	 
+	
+	#top_menu > #blogin:hover, #top_menu > #blogout:hover {
+		font-family: 'Do Hyeon', sans-serif;
+		border: 1px solid white;
+		background: black;
+		color: white;
+	}
+	
+	#sub_menu {
+		position: absolute;
+		top: 79px;
+		right: 62px;
+	}
+	
+	#sub_menu > li {
+		display: inline-block;
+		/* 세로로 나열되는 것을 가로로 나열되게 설정 */
+		margin-left:5px;
+		list-style: none;
+	}
+	
+	#sub_menu > li > a, #home > li > a {
+		font-family: 'Paytone One', sans-serif;
+		text-decoration: none;
+		color: black;
+		/*  태그 버튼 모양으로 */
+	}
+	
+	#sub_menu > li > a:hover, #home > li > a:hover {
+		background: #FC9D9A;
+		text-decoration: underline;
+		color: ivory;
+		cursor: pointer;		/*  마우스 모양도 손가락 모양으로 */
+	}
+	
+	#home {
+	position: absolute;
+	top: -20px;
+	left: -14px;
+	}	
+	
+	#home > li {
+		list-style: none;
+		display: inline;
+		margin-right: 10px;
+	}
+
+
+#content {
+	overflow: hidden;
+	height: 600px;
+	display: inline-block;
+	font-family: 'Do Hyeon', sans-serif;
+}
+	
+	#nav {
+		border: 0;
+		background: #F9CDAD;
+		width: 13%;
+		height: 100%;
+		float: left;
+		box-sizing: border-box;
+		margin-right: 7px;
+		overflow: hidden;
+	}
+	
+	#sec {
+		border: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		background: #C8C8A9;
+		width: 69%;
+		height: 100%;
+		float: left;
+		box-sizing: border-box;
+		margin-right: 3px;
+		overflow: scroll;
+	}
+	
+	.mem, #sin {
+		padding-left: 50px;
+    	padding-top: 45px;
+    	position: relative;
+	}
+	
+	#forphoto {
+		position: absolute;
+		top: 55px;
+		right: 5px;
+	}
+	
+	.label {
+		display: inline-block;
+		width: 55px;
+		text-align: right;
+		vertical-align: top;
+	}
+	.error {
+		font-size: 10px;
+    	color: darkred;
+    	text-decoration: underline;
+	}
+	
+	.findStr {
+	    float: right;
+	    margin-right: 30px;
+	}
+	
+	#btnFind, #btnRegister, .btn {
+		font-family: 'Do Hyeon', sans-serif;
+		border: 0;
+		background: #C8C8A9;
+		font-size: 15px;
+	}
+	
+	.btn {
+		width: 100px; 
+		height: 40px;
+		margin-left: 65px; 
+	}
+	
+	#btnFind:hover, .btn:hover {
+		font-family: 'Do Hyeon', sans-serif;
+		border: 1px solid white;
+		background: black;
+		color: white;
+		font-size: 15px;
+	}	
+	
+	#viewmem, #modifymem, #deletemem, .title {
+		-webkit-animation-delay: 1s;
+	}
+	
+/* 		-webkit-animation:  fadeIn 1s 2s 1 linear alternate, */
+/* 							fadeOut 1s 4s 1 linear alternate; */
+/*		애니메이션 두개이상 적용하기   name duration delay  부드럽게  fill */ 
+	.view, .modi, .dele {
+		-webkit-animation-delay: 2s;
+		position: relative;
+	}
+	
+	.msg {
+		font-size: 11px;
+		color: red;
+		text-align: center;
+	}
+	
+	.a {
+		display: inline-block;
+	     width: 120px;
+	    height: 40px;
+	    margin-left: 2px;
+	    text-decoration: none;
+	    font-family: 'Do Hyeon', sans-serif;
+	    border: 0;
+	    background: #C8C8A9;
+	    color: black;
+	    box-sizing: border-box;
+	    padding: 10px;
+	    text-align: center;
+	}
+	
+	.a:hover {
+		display: inline-block;
+		font-family: 'Do Hyeon', sans-serif;
+		border: 1px solid white;
+		background: black;
+		color: white;
+		box-sizing: border-box;
+	    padding: 10px;
+		
+	}
+
+
+	
+	#wrapMenu {
+		display: inline-block;
+		width: 100%;
+		text-align:center;
+		overflow-y: scoll;
+	}
+	
+	#listmenu {
+		margin: 0 auto;
+   		background-color: black;
+   		color: white;
+  		width: 65%;
+  		margin-top: 12px;
+   		margin-left: 147px;
+   		padding-left: 10px;
+    	padding-right: 10px;
+
+   		
+	}
+	
+	#findmenu > li {
+		display: inline-block;
+		/* 세로로 나열되는 것을 가로로 나열되게 설정 */
+		
+		list-style: none;
+	}
+
+	#findResult {
+		display: inline-block;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		width: 75%;
+		height: 600px;
+		margin-top: 8px;
+		margin-left: 88px;
+		padding-top: 8px;
+		
+		
+	}
+	
+	.row {
+		text-align: center;
+		dispaly: inline-block;
+	}
+	
+	.b {
+		border: 0px;
+		background-color: #C8C8A9;
+	}
+	.np {
+		font-weight: bold;
+	}
+	
+	.id {
+		display: block;
+		width: 150px;
+		text-align: left;		
+	}
+	
+	.name {
+		display: block;
+		width: 80px;
+		text-align: left;	
+	}
+	
+	
+	.phone {
+		display: block;
+		width: 170px;
+		text-align: left;	
+	}
+	
+	.email {
+		display: block;
+		width: 200px;
+		text-align: left;	
+	}
+	
+	.rdate {
+		display: block;
+		width: 140px;
+		text-align: left;	
+	}
+	
+	.image {
+		display: inline;
+		width: 70px;
+		height:105px;
+		text-align: center;
+	}
+	
+	
+	.vla{
+		display: inline-block;
+		width: 80px;
+	}
+	
+	#wmenu {
+		display: inline-block;
+		width: 300px;
+		border: 1px solid #999999;
+		margin-top: 10px;
+   		margin-left: 50px;
+	}
+	
+	
+	#aside {
+		border: 0;
+		background: #F9CDAD;
+		width: 15%;
+		height: 100%;
+		float: right;
+		box-sizing: border-box;
+		margin-right: 3px;
+	}
+	
+	#aside > div {
+		text-align: center;
+		margin-top: 12px;
+	}
+	
+#footer {
+	text-align: center;
+	background-color: #83AF9B;
+	border: 0;
+	border-radius: 2px;
+	padding: 25px;
+	box-sizing: border-box;
+}
+
+.info {
+	font-size: 0.85em;
+	font-weight: bold;
+	line-height: 36px;
+	margin: 5em 0 0;
+	color: #9c9898;
+}

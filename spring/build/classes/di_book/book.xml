@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	<bean id="messageBean" class="di_book.MessageBeanImpl">
+		<constructor-arg> <!-- 생성자 호출, 만약 생성자 그 자체라면 그냥 constructor-->
+			<value>Spring</value> <!-- value는 곧 parameter의 setter의 매개변수 값 -->
+		</constructor-arg>
+		
+		<property name="greeting"> <!-- 필드변수 greeting의 setter -->
+			<value>Hello</value>
+		</property>
+	
+		<property name="outputter" ref ="outputter"/>
+	</bean>
+	
+	<bean id="outputter" class="di_book.FileOutputter">
+		<property name="filePath">
+			<value>out.txt</value>
+		</property>
+	</bean>
+</beans>

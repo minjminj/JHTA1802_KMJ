@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+header {
+	width: 1200px;
+    height: 61px;
+    margin: 5px auto;
+/*     overflow: hidden; */
+}
+
+header #home {
+	display: inline-block;
+	width: 200px;
+    height: 61px;	
+/*     border: 1px solid; */
+    overflow: hidden;
+    line-height: 47px;
+	
+}
+
+#home > a {
+    font-family: 'Kalam', cursive;
+	display: block;
+	text-decoration: none;
+	color: black;
+/* 	padding-left: 40px; */
+	font-size: 17px;
+/* 	margin-top: 31px; */
+    margin-bottom: -37px;
+    transition: opacity .3s linear;
+    opacity: 0.8;
+    letter-spacing: 8px;
+	
+	
+}
+
+#home ul {
+	margin-left: -53px;
+	
+}
+
+#home li {
+	list-style: none;
+	display: inline;
+	font-size: 10px;
+    margin-left: 13px;
+    opacity: 0.8;
+	
+	
+}
+
+#home li a {
+/* 	text-decoration: none; */
+	color: #999;
+	
+	
+}
+
+header #menu{
+    display: inline-block;
+	width: 990px;
+    height: 100%;
+/*     border: 1px solid; */
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+#menu1, #menu2 {
+	display: inline-block;
+	line-height: 65px;
+/* 	margin-left: 20px; */
+	margin-right: 20px;
+	
+}
+
+#menu1:hover, #menu1:active, #menu1:hover, #menu1:active {
+	color: #999;
+	text-decoration: underline;
+}
+
+#sub1, #sub2 {
+	font-family: 'Patrick Hand', cursive;
+	position: relative;
+	text-align: center;
+	font-size: 15px;
+
+}
+
+#item1, #item2 {
+	position: absolute;
+	font-size: 10px;
+	width: 190px;
+	color: black;
+	
+}
+
+
+#item1 li, #item2 li {
+	display:block;
+	margin-top: -36px;
+    margin-left: -38px;
+	text-align: left;
+	
+}
+
+#item1 li:hover, #item2 li:hover {
+	cursor: pointer;
+	color: #999;
+	text-decoration: underline;
+}
+ 
+ 
+ #center {
+ 	width: 1200px; 
+    height: 600px;
+    margin: 5px auto;
+ }
+ 
+ #wall {
+ 	display: inline-block;
+ 	width: 150px;
+ 	height: 600px;
+ 	background-color: #f9f9f9;
+ 	 overflow: hidden;
+ 	 float: left;
+ }
+ 
+ 
+#content {
+	display: inline-block;
+	width: 1050px; 
+    height: 600px;
+/*      overflow: hidden; */
+     float:left;
+/* 	box-sizing: border-box; */
+/* 	width: 1200px; */
+	/*   border: 1px solid; */ 
+    overflow-y: scroll;
+/*     margin: 5px auto; */
+    background-color: #f4f4f4;
+/*     height: 600px; */
+/*     padding-left: 10px; */
+/*     padding-top: 10px; */
+    
+	
+}
+
+.err {
+	color: red;
+}
+
+#insert label, #reply label, #view label{
+	vertical-align: top;
+	display: inline-block;
+	width: 70px;
+	text-align: right;
+}
+
+#output {
+	color: grey;
+}
+
+footer {
+	font-family: 'Abril Fatface', cursive;
+	width: 1200px;
+    height: 100px;
+/*     border: 1px solid; */
+    margin: 5px auto;
+    line-height: 100px;
+    text-align: center;
+    color: #999;
+    font-size: 108px;
+    text-shadow: 5px 2px 4px;
+    letter-spacing: 51px;
+}
+   
+	
+}

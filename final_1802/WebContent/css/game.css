@@ -1,0 +1,159 @@
+/* game.css */
+
+
+
+
+/* game_index.jsp */
+#gi_wrap {
+	padding-top:50px;
+}
+#gi_wrap h3 {
+	text-align: center;
+}
+#gi_wrap #game_widths {
+	text-align: center;
+	margin: 0 auto;
+}
+#gi_wrap .game_with {
+	display: inline-block;
+	margin: 5%;
+	width: 20%;
+}
+#gi_wrap .game_with_img {
+	display: inline-block;
+	
+}
+#gi_wrap .input_text {
+	color: black;
+}
+
+
+/* game_title_list.jsp */
+#gtl_wrap {
+	padding-top:50px;
+}
+#gtl_wrap h3 {
+	text-align: center;
+}
+#gtl_wrap #gtl_list_area {
+	text-align: center;
+	margin: 0 auto;
+}
+#gtl_wrap div {
+}
+#gtl_wrap .gt_item {
+	display: inline-block;
+	margin: 5%;
+	width: 20%;	
+}
+#gtl_wrap input {
+	text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background: #010109;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 26px;
+}
+
+/* tbl_list.jsp */
+#tbl_list_wrap {
+	text-align: center;
+}
+#tbl_list_wrap h3 {
+	text-align: center;
+}
+#tbl_list_wrap .tbl_item {
+	
+	
+	background-color: #655643;
+	
+	display:inline-block;
+	width: 25%;
+    margin: 30px 35px;
+}
+
+#tbl_list_wrap .tbl_info {
+	padding: 20px 0;
+}
+
+#tbl_list_wrap .tbl_btn_area {
+	
+	background-color: #010109;
+}
+
+#tbl_list_wrap input {
+	text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background: #010109;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 26px;
+}
+
+#tbl_list_wrap .visibility_hidden {
+	visibility: hidden;
+}
+
+
+/* tvt_ready */
+#tvt_ready_wrap {
+	text-align:center;
+}
+
+#tvt_ready_wrap #tvt_ready_view {
+	display: inline-block;
+	width: 80%;
+}
+
+#tvt_ready_wrap #tvt_info_gt, #tvt_ready_wrap #tvt_info_menu {
+	display: inline-block;
+	width: 46%;
+}
+
+#tvt_ready_wrap input {
+	color: black;
+}
+#tvt_req input {
+	text-align: center;
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    background: #010109;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 35px;
+	margin: 70px 25px;
+}
+
+
+/* gmae_index.jsp */
+#gi_wrap .input_text {
+	display:hidden;
+}
+
+
+
+.btnGame{
+	text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background: #010109;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 26px;
+}

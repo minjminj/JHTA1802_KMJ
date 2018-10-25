@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+					    http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- 클라이언트가 .hta로 들어오면 spring-mvc-servlet이 처리하겠다 -->
+	<servlet>
+		<servlet-name>spring-mvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring-mvc</servlet-name>
+		<url-pattern>*.hta</url-pattern>
+	</servlet-mapping>
+			
+	<servlet>
+		<servlet-name>members</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>members</servlet-name>
+		<url-pattern>*.mbr</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>orders</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>orders</servlet-name>
+		<url-pattern>*.ord</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+      <servlet-name>chat</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>chat</servlet-name>
+      <url-pattern>*.chat</url-pattern>
+   </servlet-mapping>
+   
+    	<!-- game(이봉기) -->
+	<servlet>
+      <servlet-name>game</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>game</servlet-name>
+      <url-pattern>*.game</url-pattern>
+   </servlet-mapping>
+   
+   
+   	<servlet>
+      <servlet-name>admin</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>admin</servlet-name>
+      <url-pattern>*.adm</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+      <servlet-name>auction</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>auction</servlet-name>
+      <url-pattern>*.auc</url-pattern>
+   </servlet-mapping>
+   
+	<servlet>
+      <servlet-name>etc</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>etc</servlet-name>
+      <url-pattern>*.etc</url-pattern>
+   </servlet-mapping>
+   
+   	<servlet>
+		<servlet-name>ip</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ip</servlet-name>
+		<url-pattern>*.ip</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>modal</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modal</servlet-name>
+		<url-pattern>*.modal</url-pattern>
+	</servlet-mapping>
+   
+</web-app>
+
+

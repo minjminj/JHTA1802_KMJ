@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {	font-family: 'Gaegu', cursive; }
+#title {
+	border-left:10px solid #ff5555;
+	padding-left:10px;
+	box-sizing:border-box;
+	background:#ffeeee;
+}
+
+.la {
+	display: inline-block;
+	width: 120px;
+	border:1px solid #aaaaaa;
+	border-radius: 2px;
+	text-align: right;
+	
+	margin-right:5px;
+	padding-right:5px;
+}
+#subject {margin-top: 3px;}
+#subject > .la {
+	vertical-align: top;
+}
+#subject > select {
+	width:160px; 
+	height:180px; 
+}
+
+#btn {
+	margin-left: 137px;
+}
+
+#result {
+	border:2px solid #aaaaaa;
+	border-radius: 2px;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 750px; height:255px;
+	position: realtive;
+	color: #ff8080;
+	
+	font-weight:bold;
+	margin-left: 137px;
+	overflow : scroll;
+}
+
+th {
+	background-color:#b13235;
+}
+
+table{
+	border-spacing: 0px;
+}

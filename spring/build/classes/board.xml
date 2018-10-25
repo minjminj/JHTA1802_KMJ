@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace='board'>
+	<insert id="insert" parameterType="bean.BoardVo">
+		insert into board
+		values(seq_board.nextval, sysdate, 
+		#{id}, #{subject}, #{doc}, 0, 
+		seq_board.currval, seq_board.currval,
+		#{attfile}, #{fileOri}, #{password})
+	</insert>
+	
+	<select id="list_count" parameterType="String" resultType="int">
+		select count(serial) cnt
+		from board  
+		where id like 		'%${_parameter}%' 
+			or subject like '%${_parameter}%' 
+			or doc like 	'%${_parameter}%' 
+	</select>
+	
+	<select id="list" parameterType="map" resultType="bean.BoardVo">
+		select * from (
+			select rownum num, r.* from (
+				 select * 
+				 from board 
+				 where id like 		'%${findStr}%' 
+				 	or subject like '%${findStr}%' 
+				 	or doc like 	'%${findStr}%'
+				 order by grp desc, deep
+			) r
+		) where num between #{startNo} and #{endNo} 
+	</select>
+	
+	<select id="view" parameterType="int" resultType="bean.BoardVo">
+		select * 
+		from board 
+		where serial = #{_parameter}
+	</select>
+	
+	<!-- resultType은 select에서만 사용가능! -->
+	<update id='update' parameterType="map">
+		update board set
+			subject = #{subject} , 
+			doc = #{doc} , 
+			attfile = #{attfile} , 
+			fileori = #{fileori} 
+		where serial = #{serial} and password = #{password}
+	</update>
+	
+	<insert id="insert_reply" parameterType="bean.BoardVo">
+		insert into board
+		values(seq_board.nextval, sysdate, 
+		#{id}, #{subject}, #{doc}, 0, 
+		#{grp}, #{grp}||'-'||seq_board.currval,
+		#{attfile}, #{fileOri}, #{password})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		delete board where serial = #{_parameter}
+	</delete>
+</mapper>

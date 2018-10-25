@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace='chat'>
+	<select id="chat_table_no" parameterType="String" resultType="int">
+		select tbl_no from table_status where tbl_ip = #{_ip}
+	</select>
+	<select id="chat_table_list" parameterType="bean.ChatDao" resultType="bean.TblVo">
+		select * from (
+			select rownum num, tbl.* from (
+				select tbl_no, tbl_ip from table_status where tbl_ip is not null order by tbl_no
+				) tbl
+			) where num between #{startNo} and #{endNo}
+	</select>
+	<select id="chat_count" resultType="int">
+		select count(guest_status)-1 from guest where guest_status = 1
+	</select>
+	<select id="chat_open_list" resultType="bean.GuestVo" parameterType="bean.ChatDao">
+	<!-- chatHeader에 띄울 접속한 테이블의 번호 목록, listSize가 3이므로 3개만 불러옴 -->
+		select * from (
+			select rownum num, g.* from (
+				select table_no, guest_status, guest_gender
+				from guest where guest_status = 1 and table_no != #{tableNo}
+				order by table_no
+			) g
+		) where num between #{startNo} and #{endNo}
+	</select>
+	<select id='chat_all_list' resultType="bean.GuestVo">
+		select table_no, guest_status, guest_gender 
+		from guest where guest_status = 1 
+		order by table_no
+	</select>
+	<select id="chat_content_list" resultType="bean.TotalChatListVo">
+		select g.table_no, g.guest_gender, c.chat_date, c.chat_sender, c.chat_text, c.chat_receiver
+		from guest g full outer join table_status ts 
+		on g.table_no = ts.tbl_no 
+		right outer join chat c 
+		on g.table_no = c.chat_sender 
+		where g.guest_status = 1
+		and c.chat_receiver = 'a' 
+		order by c.chat_date asc
+	</select>
+	<select id="chat_one_to_one_list" resultType="bean.TotalChatListVo" parameterType="bean.ChatVo">
+		select g.table_no, g.guest_gender, c.chat_date, c.chat_sender, c.chat_text, c.chat_receiver
+		from guest g full outer join table_status ts 
+		on g.table_no = ts.tbl_no 
+		right outer join chat c 
+		on g.table_no = c.chat_sender 
+		where g.guest_status = 1 
+		and ( (
+				c.chat_sender = #{chat_sender} 
+				and c.chat_receiver = #{chat_receiver}) 
+			or (
+				c.chat_sender = #{chat_receiver} 
+				and c.chat_receiver = #{chat_sender}
+			) )
+		order by c.chat_date asc
+		
+		
+	</select>
+	<insert id="chat_insert" parameterType="bean.ChatVo">
+		insert into chat values (
+			sysdate, #{chat_text}, #{chat_sender}, #{chat_receiver}
+		)
+	</insert>
+	<select id='chat_notice' resultType="String">
+		select notice_text from (select notice_text from notice order by notice_date desc) where rownum = 1
+	</select>
+	<insert id='notice_insert' parameterType="String">
+		insert into notice values (
+			sysdate, #{noticeText}
+		)
+	</insert>
+</mapper>

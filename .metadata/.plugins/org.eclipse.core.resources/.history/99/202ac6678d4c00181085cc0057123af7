@@ -1,0 +1,37 @@
+/*
+ * 각 항목의 내용을 메소드를 사용하여 처리하시오.
+ * 1) 정수형 배열을 매개변수로 전달받아 최댓값을 찾아 반환 받아 출력하시오. public int m1(int[] a) {//TODO}
+ * 2) 문자열 배열과 인덱스를 매개 변수로 전달받아 index에 해당하는 문자열을 반환 받아 출력하시오. public String m2(String[] str){//TODO}
+ * 3) 2차원 배열을 전달받아 각 행의 최댓값을 배열로 저장하여 반환 받아 출력하시오. public int[] m3(int[][]a){//TODO}
+ * 4) 문자열을 전달받아 로컬 배열(문자열 1차배열)에서 해당 위치를 찾아 정수로 반환 받아 출력하시오. public int 4(String findstr){//TODO}
+ * 5) 매개변수로 받은 수 보다 큰 수들을 배열로 만들어 반환하여 출력하시오. (정수형 배열은 로컬 배열) public int[] m5(int f) {//TODO}
+ */
+package MinjeongPractice;
+
+public class ArrayTest3 {
+	
+	int[] aa;		// m1에 전달 될 정수형 배열
+	String[] bb;	// m2에 전달 될 문자열 배열
+	
+	public ArrayTest3(){
+		this.aa = new int[] {3, -9, 4, 7, -5, -2, 8};
+		this.bb = new String[]{"아메리카노", "카페라떼", "카페모카", "바닐라라떼", "콜드브루"};
+	}
+	
+	public int m1(int[] a){
+		this.aa = a;
+		int max = a[0];
+		
+		for (int i=0 ; i<a.length ; i++){
+			if (max < a[i]){
+				max = a[i];
+			}
+		}
+		System.out.println("max: " + max);
+		return max;
+	}
+
+	public void prn(){
+		m1(aa);
+	}
+}

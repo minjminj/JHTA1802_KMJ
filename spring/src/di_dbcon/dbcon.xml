@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="empdao" class="di_dbcon.EmpDao">
+		<constructor-arg ref="DBConn"/>
+	</bean>
+	<bean id="DBConn" class="di_dbcon.DBConn">
+		<property name="findStr">
+			<value>n</value>
+		</property>
+		<property name="id">
+			<value>123</value>
+		</property>
+		<property name="name">
+			<value>ghgh</value>
+		</property>
+		<property name="sal">
+			<value>65854</value>
+		</property>
+	</bean>	
+	
+</beans>

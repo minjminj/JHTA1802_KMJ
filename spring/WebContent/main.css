@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+#index {
+	margin:0 auto;
+	width: 1200px;
+	height: 700px;
+/* 	display: inline-block; */
+	border: 1px dashed  #d0d0d0;
+	border-radius: 15px;
+}
+
+#index #btnLogin, #index #btnLogout, #index #mid {
+	display: inline-block;
+	float: right;
+	margin: 10px 10px 0px 0;
+	background: #f0f2e7;
+	border: none;
+	padding: 5px;
+	
+}
+
+#index #btnLogin:hover,  #index #btnLogout:hover {
+	float: right;
+	margin: 10px 10px 0px 0;
+	background: #f8ced2;
+	color: white;
+	border: none;
+	padding: 5px;
+}
+
+#header {
+	width: 1180px;
+	margin: -10px auto;
+	margin-top: 45px;
+	background: #f7dfe3;
+}
+
+#center {
+	overflow: hidden;
+	width: 1180px;
+	height: 525px;
+	margin: 5px auto;
+	opacity: 1;
+	
+}
+
+#menu {
+	display: inline-block;
+	overflow: hidden;
+	width: 200px;
+	height: 100%;
+	background: #feac97;
+	
+}
+
+#content {
+	display: inline-block;
+	overflow-y: scroll;
+	width: 974px;
+	height: 100%;
+	background: #ed5b46;
+}
+
+#footer {
+	overflow: hidden;
+	width: 1180px;
+	height: 85px;
+	margin: 5px auto;
+	background: #84ac67;
+}
+
+#login {
+	margin: 50px auto;
+	width: 300px;
+}
+
+#login form {
+	display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#login  label {
+	display: inline-block;
+	width: 80px;
+	margin: 10px auto;
+}
+
+.label {
+	display: inline-block;
+	width: 80px;
+	margin: 10px auto;
+	vertical-align: top;
+	
+}
+
+.btn {
+	display: inline-block;
+	background: #f0f2e7;
+	border: none;
+	padding: 5px;
+	
+}
+
+.btn:hover {
+	background: #84ac67;
+	color: white;
+	border: none;
+	padding: 5px;
+}
+
+.row {
+	margin: 10px auto;
+	width: 200px;
+}
+
+#list, #view, #insert, #modify, #b_list, #b_insert, #find {
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+#list #frm, #list #btn_insert, #b_list #frm, #b_list #btnRegister {
+	float: right;
+	display: block;
+	margin-right: 10px;
+}
+
+#list #student_list {
+	border-bottom: 2px solid #feac97;
+    background: #feac97;
+	color: #544a44;
+    width: 800px;
+    margin: 15px auto;
+    font-weight: bold;
+}
+
+#list .student_list:hover {
+	border: 1px solid #feac97;
+    background: #f0f2e7;
+    color: black;
+    width: 800px;
+    margin: 15px auto;
+    
+	
+}
+
+#list .student_list {
+	border: 1px solid #feac97;
+	background: #feac97;
+	color: white;
+    width: 800px;
+    margin: 15px auto;
+	
+}
+
+#list .id {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+#list .name {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#list .email {
+	display: inline-block;
+	width: 300px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#list .phone {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#insert input, #view input {
+	display: inline-block;
+	margin: 10px;
+}
+
+#insert #post {
+	margin-left: 96px;
+}
+
+#view #form, #insert #insert_form {
+	display: inline-block;
+    width: 300px;
+    float: left;
+}
+
+#view #photoZone, #insert #forphoto {
+	display: inline-block;
+	width: 400px;
+}
+
+#b_list #board_list {
+	border-bottom: 2px solid #feac97;
+    background: #feac97;
+	color: #544a44;
+    width: 825px;
+    margin: 15px auto;
+    font-weight: bold;
+}
+
+#b_list .board_list {
+	border: 1px solid #feac97;
+	background: #feac97;
+	color: white;
+    width: 825px;
+    margin: 15px auto;
+	
+}
+#b_list .board_list:hover {
+	border: 1px solid #feac97;
+    background: #f0f2e7;
+    color: black;
+    width: 825px;
+    margin: 15px auto;
+	
+}
+
+#b_list .serial {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+
+#b_list .subject {
+	display: inline-block;
+	width: 250px;
+	text-align: center;
+}
+
+#b_list .doc {
+	display: inline-block;
+	width: 350px;
+	text-align: center;
+}
+
+#b_list .id {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+
+#login a {
+	text-decoration: none;
+	color: black;
+}
+
+#login a:hover {
+	text-decoration: underline;
+	color: ivory;
+}
+
+/* #index { */
+/* 	position: relative; */
+/* 	z-index: 1; */
+/* 	width: 1200px; */
+/* 	height: 700px; */
+	
+/* } */
+/* #index:after { */
+/* 	content: "0"; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	position: absolute; */
+/* 	z-index: -1; */
+/* 	display: inline-block; */
+/* 	border: 1px solid black; */
+/* 	background-image: url(./img/aaaa.JPG); */
+/* 	opacity: 0.6!important; */
+/* /*     background-repeat: no-repeat; */ */
+/* /*     background-attachment: fixed; */ */
+/*     background-size: 100%; */
+/*     width: 100%; */
+/*     height: 100%; */
+/* } */

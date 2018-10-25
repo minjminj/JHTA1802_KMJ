@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- bean -->
+	<bean id="adm_dao" class="bean.AdminDao"/>
+	<bean id="menu_dao" class="bean.MenuDao"/>
+		
+<!-- controller -->
+	<bean id="adm_controller" class="bean.AdminController">
+		<constructor-arg ref="adm_dao"/>
+		<constructor-arg ref="menu_dao"/>
+	</bean>
+	
+<!-- view resolver -->
+	<bean id="view_resolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/admin/admin_index.jsp?content="/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+</beans>

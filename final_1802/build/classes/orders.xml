@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace='ord'>
+
+	<!-- menu 테이블에서 menu목록을 가져오기 -->
+	<select id='menu_list' parameterType='String' resultType='bean.MenuVo'>
+		select menu_no, menu_type, menu_name, menu_price, menu_image, menu_hit, menu_day 
+		from menu 
+		where menu_type like '%${_parameter}%'
+	</select>
+	
+	<!-- 안주류만 가져오기 -->
+	<select id='menu_list2' parameterType='String' resultType='bean.MenuVo'>
+		select menu_no, menu_type, menu_name, menu_price, menu_image, menu_hit, menu_day 
+		from menu 
+		where not menu_type = 'drink'
+	</select>
+	
+	<!-- 주문 추가시 가져올 정보 -->
+	<select id='add_order' parameterType='int' resultType='bean.MenuVo'>
+		select menu_name, menu_price
+		from menu 
+		where  menu_no = ${_parameter}
+	</select>
+	
+	<!-- 주문을 넣어보자 -->
+	<insert id='order' parameterType='bean.OrdersVo'>
+		insert all
+			into orders
+				values(seq_orders.nextval, ${guest_no}, ${ord_tbl_no}, sysdate)
+	<foreach collection='stuff' item='value' index='key'>
+			into orders_set
+				values(addOrdersSerial(), seq_orders.currval, ${value[0]}, ${value[1]}, ${value[2]}, null)
+	</foreach>
+	select * from dual
+	</insert>
+	
+	<!-- 주문내역을 가져와보자 -->
+	<select id='view_list' parameterType='int' resultType='bean.OrdersSetVo'>
+		select os.*, (select menu_name from menu m where os.menu_no = m.menu_no) menu_name
+		from orders_set os join orders ord 
+		on os.ord_no = ord.ord_no
+		where ord.guest_no = ${_parameter}
+	</select>
+</mapper>
